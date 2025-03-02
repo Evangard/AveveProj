@@ -10,13 +10,12 @@ public class LoginTest extends AbstractTest {
 
     private LoginPage loginPage;
     private HomePage homePage;
-    private PullRequestPage pullRequestPage;
     private static final String USER = "anton.mikolaenko@gmail.com";
     private static final String PASS = "TesteR_2025";
 
     @BeforeClass
     public void beforeActions() {
-        homePage = AbstractTest.browser.openLoginPage().login(USER, PASS);
+//        homePage = AbstractTest.browser.openHomePage().login(USER, PASS);
     }
 
     @Test(dataProvider = "attempts")

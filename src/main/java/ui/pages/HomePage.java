@@ -22,18 +22,4 @@ public class HomePage extends AbstractPage{
         return personAccountLink.isDisplayed();
     }
 
-    public RepoPage openRepositories(String username) {
-       Browser.getDriver().get(String.format("https://github.com/%s?tab=repositories", username));
-       return new RepoPage();
-    }
-
-    public ProjPage openProject(String userName, String projectName) {
-        Browser.getDriver().get(String.format("https://github.com/%s/%s", userName, projectName));
-        return new ProjPage();
-    }
-
-    public EditProjPage editReadmeFile(String userName, String projectName) {
-        Browser.getDriver().get(String.format("https://github.com/%s/%s/edit/main/README.md", userName, projectName));
-        return new EditProjPage();
-    }
 }
