@@ -3,7 +3,6 @@ package ui.pages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import ui.WaitUtil;
 import ui.elements.Button;
 import ui.elements.Input;
 import ui.elements.Label;
@@ -22,6 +21,9 @@ public class LoginPage extends AbstractPage {
     @FindBy(xpath = "//h1[normalize-space()='Aanmelden']")
     private WebElement registerLabel;
 
+    @FindBy(xpath = "//div[text()='Combinatie van e-mail en wachtwoord wordt niet herkend']")
+    private WebElement errorMessage;
+
     public Input emailAddressField() {
         return new Input(emailAddressField, "E-mailadres field");
     }
@@ -39,11 +41,11 @@ public class LoginPage extends AbstractPage {
     }
 
     @Step
-    public HomePage login(String email, String password) {
+    public CustomerPage login(String email, String password) {
         setEmail(email);
         setPassword(password);
         submitButton().click();
-        return new HomePage();
+        return new CustomerPage();
     }
 
     @Step("Enter '{0}' email")
@@ -54,6 +56,11 @@ public class LoginPage extends AbstractPage {
     @Step("Enter '{0}' password")
     public void setPassword(String password) {
         passwordField().clearAndType(password);
+    }
+
+    @Step("Check if error message is displayed.")
+    public boolean isErrorMessageShown() {
+        return tryWaitUntil(() -> errorMessage.isDisplayed());
     }
 
     @Override

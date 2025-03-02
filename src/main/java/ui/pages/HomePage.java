@@ -1,17 +1,26 @@
 package ui.pages;
 
-import ui.config.Browser;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ui.elements.Button;
 
-public class HomePage extends AbstractPage{
+public class HomePage extends AbstractPage {
 
     @FindBy(xpath = "//div[contains(@class, 'hidden')]/a//span[text()='MyAveve']")
     private WebElement myAveveButton;
 
+    @FindBy(id = "onetrust-accept-btn-handler")
+    private WebElement acceptAllCookiesButton;
+
+    @FindBy(xpath = "//title[text()='Home - Aveve - hier groeit plezier']")
+    private WebElement title;
+
     public Button myAveveButton() {
         return new Button(myAveveButton);
+    }
+
+    public Button acceptAllCookiesButton() {
+        return new Button(acceptAllCookiesButton);
     }
 
     public LoginPage openLoginPage() {
@@ -21,15 +30,9 @@ public class HomePage extends AbstractPage{
 
     @Override
     protected void waitUntilLoaded() {
-//        waitUntilElementIsVisible(personAccountLink);
+        waitUntil(() -> title.isEnabled());
+        if (tryWaitUntil(() -> acceptAllCookiesButton.isDisplayed(), 5)) {
+            acceptAllCookiesButton().click();
+        }
     }
-
-//    public boolean isUserLoggedIn() {
-//        return personAccountLink.isDisplayed();
-//    }
-//
-//    public boolean isPersonAccountLink() {
-//        return personAccountLink.isDisplayed();
-//    }
-
 }

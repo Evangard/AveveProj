@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public final class WaitUtil {
 
-    public static final int DEFAULT_TIMEOUT_TO_WAIT = 10;
+    public static final int DEFAULT_TIMEOUT_TO_WAIT = 5;
 
     public static FluentWait<WebDriver> getWebDriverWait(int timeInSeconds) {
         return new FluentWait<>(Browser.getDriver()).withTimeout(Duration.ofSeconds(timeInSeconds))
@@ -33,7 +33,9 @@ public final class WaitUtil {
             Function<WebDriver, Boolean> conditionToBeTrue = (WebDriver d) -> condition.get().equals(Boolean.TRUE);
             WaitUtil.getWebDriverWait(timeInSeconds).until(conditionToBeTrue);
         } catch (Exception e) {
-            RuntimeException exception = new RuntimeException(String.format("Element is still not '%s' after %d seconds of wait. Original error message: %s", conditionName, timeInSeconds, e.getMessage()));
+            RuntimeException exception = new RuntimeException(String.format(
+                    "Element is still not '%s' after %d seconds of wait. Original error message: %s",
+                    conditionName, timeInSeconds, e.getMessage()));
             exception.setStackTrace(e.getStackTrace());
             throw exception;
         }
