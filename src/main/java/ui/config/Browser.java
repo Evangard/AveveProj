@@ -9,7 +9,7 @@ import ui.pages.LoginPage;
 
 public class Browser {
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static String originUrl = "https://www.aveve.be/";
+    private static String originUrl = "https://www.aveve.be/nl/";
 
     public static WebDriver getDriver() {
         if (driver.get() != null) {
