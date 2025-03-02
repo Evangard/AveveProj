@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite" verbose="1" configfailurepolicy="continue" parallel="none" thread-count="1">
+    <listeners>
+        <listener class-name="config.Listener"/>
+    </listeners>
+    <test name="Regression">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+</suite>
