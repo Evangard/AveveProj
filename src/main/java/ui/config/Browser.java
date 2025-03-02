@@ -1,14 +1,15 @@
-package config;
+package ui.config;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
-import pages.LoginPage;
+import ui.pages.HomePage;
+import ui.pages.LoginPage;
 
 public class Browser {
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static String originUrl = "https://github.com/login";
+    private static String originUrl = "https://www.aveve.be/";
 
     public static WebDriver getDriver() {
         if (driver.get() != null) {
@@ -17,7 +18,6 @@ public class Browser {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-//        ChromeDriver driver = new ChromeDriver(options);
         driver.set(new ChromeDriver(options));
         driver.get().manage().window().maximize();
         return driver.get();
@@ -27,9 +27,9 @@ public class Browser {
         return originUrl;
     }
 
-    public LoginPage openLoginPage() {
+    public HomePage openHomePage() {
         getDriver().get(getURL());
-        return new LoginPage();
+        return new HomePage();
     }
 
     public static void closeDriver() {

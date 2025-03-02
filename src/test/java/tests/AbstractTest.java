@@ -1,6 +1,6 @@
 package tests;
 
-import config.Browser;
+import ui.config.Browser;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;

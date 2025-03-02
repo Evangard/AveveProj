@@ -1,4 +1,4 @@
-package config;
+package ui.config;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.testng.AllureTestNg;
@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-import static config.Browser.getDriver;
+import static ui.config.Browser.getDriver;
 
 public class Listener extends AllureTestNg {
     @Override

@@ -1,41 +1,27 @@
 package tests;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.PullRequestPage;
+import ui.pages.HomePage;
+import ui.pages.LoginPage;
 
 public class LoginTest extends AbstractTest {
 
     private LoginPage loginPage;
     private HomePage homePage;
     private PullRequestPage pullRequestPage;
-    private static final String USER = "";
-    private static final String PASS = "";
-    private static final String PROJECT_NAME = "";
+    private static final String USER = "anton.mikolaenko@gmail.com";
+    private static final String PASS = "TesteR_2025";
 
     @BeforeClass
     public void beforeActions() {
         homePage = AbstractTest.browser.openLoginPage().login(USER, PASS);
     }
 
-
     @Test(dataProvider = "attempts")
     public void test1(int att) {
-        pullRequestPage = homePage
-                .editReadmeFile(USER, PROJECT_NAME)
-                .setText("Text " + att)
-                .clickCommitChangesButton()
-                .clickCreateNewBranchButton()
-                .clickProposeChangesButton()
-                .clickCreatePullRequestButton()
-                .merge()
-                .confirmMerge()
-                .deleteBranch();
-        Assert.assertTrue(pullRequestPage.isRestoreBranchButtonShown(), "Restore branch button should be shown.");
+
     }
 
     @DataProvider(name = "attempts")
