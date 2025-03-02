@@ -1,10 +1,13 @@
 package ui.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ui.config.Browser;
 import ui.elements.Button;
+import ui.tools.enums.Tabs;
 
-public class HomePage extends AbstractPage {
+public class HomePage extends GenericPage {
 
     @FindBy(xpath = "//div[contains(@class, 'hidden')]/a//span[text()='MyAveve']")
     private WebElement myAveveButton;
@@ -14,6 +17,9 @@ public class HomePage extends AbstractPage {
 
     @FindBy(xpath = "//title[text()='Home - Aveve - hier groeit plezier']")
     private WebElement title;
+
+    @FindBy(xpath = "//div[@id='desktop-nav']//a[normalize-space()='Tuin']")
+    private WebElement tuinTab;
 
     public Button myAveveButton() {
         return new Button(myAveveButton);

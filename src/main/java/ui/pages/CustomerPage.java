@@ -7,7 +7,7 @@ import ui.elements.Button;
 import ui.elements.Input;
 import ui.elements.Label;
 
-public class CustomerPage extends AbstractPage {
+public class CustomerPage extends GenericPage {
 
     @FindBy(xpath = "//title[text()='My Account']")
     private WebElement title;
