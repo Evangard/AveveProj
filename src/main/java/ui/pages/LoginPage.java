@@ -7,7 +7,7 @@ import ui.elements.Button;
 import ui.elements.Input;
 import ui.elements.Label;
 
-public class LoginPage extends AbstractPage {
+public class LoginPage extends GenericPage {
 
     @FindBy(id = "email-address")
     private WebElement emailAddressField;
