@@ -33,7 +33,7 @@ public class CheckoutTest extends AbstractTest {
         homePage.selectCategory("Hond");
         homePage.addFirstItemToCart();
         CheckoutPage checkoutPage = homePage.openOrderPage()
-                .setQuantity(10)
+                .setQuantity(2)
                 .clickOnOrderAndPayButton()
                 .selectDeliveryType(DeliveryType.CLICK_AND_COLLECT)
                 .clickNextButton()

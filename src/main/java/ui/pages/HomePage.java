@@ -1,5 +1,6 @@
 package ui.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +30,7 @@ public class HomePage extends GenericPage {
         return new Button(acceptAllCookiesButton);
     }
 
+    @Step("Open login page.")
     public LoginPage openLoginPage() {
         myAveveButton().click();
         return new LoginPage();

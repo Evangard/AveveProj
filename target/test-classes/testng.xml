@@ -6,6 +6,7 @@
     <test name="Regression">
         <classes>
             <class name="tests.LoginTest"/>
+            <class name="tests.CheckoutTest"/>
         </classes>
     </test>
 </suite>

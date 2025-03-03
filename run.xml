@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression tests" parallel="classes" thread-count="2">
+<suite name="Regression tests" parallel="classes" thread-count="1">
     <test name="rerun">
         <classes>
             <class name="tests.LoginTest"/>
-            <class name="tests.GitTest"/>
+            <class name="tests.CheckoutTest"/>
         </classes>
     </test>
 </suite>

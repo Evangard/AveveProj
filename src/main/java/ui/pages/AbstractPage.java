@@ -5,10 +5,13 @@ import ui.config.Browser;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import ui.tools.AdditionalConditions;
+import ui.tools.WebElementUtils;
 
 import java.util.function.Supplier;
 
 public abstract class AbstractPage {
+
+    private WebElementUtils webElementUtils;
 
     protected AbstractPage() {
         PageFactory.initElements(Browser.getDriver(), this);
@@ -39,5 +42,9 @@ public abstract class AbstractPage {
         } catch (TimeoutException e) {
             return false;
         }
+    }
+
+    protected WebElementUtils webElementUtils() {
+        return webElementUtils != null ? webElementUtils : WebElementUtils.getInstance();
     }
 }

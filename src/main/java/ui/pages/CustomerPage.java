@@ -25,7 +25,7 @@ public class CustomerPage extends GenericPage {
         return new Button(logoutButton, "Uitloggen button");
     }
 
-    @Step
+    @Step("Check if customer page opened.")
     public boolean isCustomerPageShown() {
         return tryWaitUntil(() -> title.isEnabled() && greetingLabel.isDisplayed());
     }
