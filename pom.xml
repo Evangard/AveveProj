@@ -48,20 +48,20 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.6</version>
-<!--                    <configuration>-->
-<!--                        <outputEncoding>UTF-8</outputEncoding>-->
-<!--                        <outputDirectory>${user.dir}/allure-report</outputDirectory>-->
-<!--                    </configuration>-->
+                    <version>3.10.0</version>
+                    <configuration>
+                        <outputEncoding>UTF-8</outputEncoding>
+                        <outputDirectory>${user.dir}/allure-report</outputDirectory>
+                    </configuration>
                 </plugin>
-<!--                <plugin>-->
-<!--                    <groupId>io.qameta.allure</groupId>-->
-<!--                    <artifactId>allure-maven</artifactId>-->
-<!--                    <version>2.10.0</version>-->
-<!--                    <configuration>-->
-<!--                        <reportVersion>2.14.0</reportVersion>-->
-<!--                    </configuration>-->
-<!--                </plugin>-->
+                <plugin>
+                    <groupId>io.qameta.allure</groupId>
+                    <artifactId>allure-maven</artifactId>
+                    <version>2.10.0</version>
+                    <configuration>
+                        <reportVersion>2.14.0</reportVersion>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>

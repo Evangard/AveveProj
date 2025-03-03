@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Regression Suite" duration-ms="22496" started-at="2022-01-23T16:39:12 EET" finished-at="2022-01-23T16:39:35 EET">
+  <suite started-at="2025-03-03T14:11:35 EET" name="Regression Suite" finished-at="2025-03-03T14:12:29 EET" duration-ms="53843">
     <groups>
     </groups>
-    <test name="Regression" duration-ms="22496" started-at="2022-01-23T16:39:12 EET" finished-at="2022-01-23T16:39:35 EET">
+    <test started-at="2025-03-03T14:11:35 EET" name="Regression" finished-at="2025-03-03T14:12:29 EET" duration-ms="53843">
       <class name="tests.LoginTest">
-        <test-method status="PASS" signature="beforeActions()[pri:0, instance:tests.LoginTest@11acdc30]" name="beforeActions" is-config="true" duration-ms="11183" started-at="2022-01-23T16:39:12 EET" finished-at="2022-01-23T16:39:23 EET">
+        <test-method is-config="true" signature="beforeActions()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:35 EET" name="beforeActions" finished-at="2025-03-03T14:11:40 EET" duration-ms="5398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeActions -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:tests.LoginTest@11acdc30]" name="testLogin" duration-ms="11165" started-at="2022-01-23T16:39:23 EET" finished-at="2022-01-23T16:39:35 EET">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:40 EET" name="beforeMethod" finished-at="2025-03-03T14:11:40 EET" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.LoginTest@11acdc30]" name="afterClass" is-config="true" duration-ms="111" started-at="2022-01-23T16:39:40 EET" finished-at="2022-01-23T16:39:40 EET">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyErrorMessageIsShownIfUserSetWrongUserData()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:40 EET" name="verifyErrorMessageIsShownIfUserSetWrongUserData" finished-at="2025-03-03T14:11:48 EET" duration-ms="8098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorMessageIsShownIfUserSetWrongUserData -->
+        <test-method is-config="true" signature="afterMethodActions(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:48 EET" name="afterMethodActions" finished-at="2025-03-03T14:11:48 EET" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.LoginTest.verifyErrorMessageIsShownIfUserSetWrongUserData()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodActions -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:48 EET" name="beforeMethod" finished-at="2025-03-03T14:11:49 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyUserCanLoginWithValidData()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:49 EET" name="verifyUserCanLoginWithValidData" finished-at="2025-03-03T14:11:52 EET" duration-ms="3443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanLoginWithValidData -->
+        <test-method is-config="true" signature="afterMethodActions(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:52 EET" name="afterMethodActions" finished-at="2025-03-03T14:11:55 EET" duration-ms="3459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.LoginTest.verifyUserCanLoginWithValidData()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodActions -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:12:29 EET" name="afterClass" finished-at="2025-03-03T14:12:29 EET" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.LoginTest -->
+      <class name="tests.CheckoutTest">
+        <test-method is-config="true" signature="beforeActions()[pri:0, instance:tests.CheckoutTest@178270b2]" started-at="2025-03-03T14:11:55 EET" name="beforeActions" finished-at="2025-03-03T14:12:01 EET" duration-ms="5487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeActions -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.CheckoutTest@178270b2]" started-at="2025-03-03T14:12:01 EET" name="beforeMethod" finished-at="2025-03-03T14:12:01 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyUserCanLoginWithValidData()[pri:0, instance:tests.CheckoutTest@178270b2]" started-at="2025-03-03T14:12:01 EET" name="verifyUserCanLoginWithValidData" finished-at="2025-03-03T14:12:29 EET" duration-ms="27825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanLoginWithValidData -->
+      </class> <!-- tests.CheckoutTest -->
     </test> <!-- Regression -->
   </suite> <!-- Regression Suite -->
 </testng-results>

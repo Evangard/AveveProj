@@ -51,13 +51,18 @@ public class WebElementUtils {
         try {
             element.click();
         } catch (WebDriverException ignored) {
-            scrollIntoViewByCoordinate(element);
+            scrollIntoElement(element);
             element.click();
         }
     }
 
     public void clickJS(WebElement element) {
         getJavascriptExecutor().executeScript("arguments[0].click();", element);
+    }
+
+    public WebElement scrollIntoElement(WebElement e) {
+        getJavascriptExecutor().executeScript("arguments[0].scrollIntoView(true)", e);
+        return e;
     }
 
     public WebElement scrollIntoViewByCoordinate(WebElement e) {

@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import ui.config.Browser;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -38,6 +39,20 @@ public final class WaitUtil {
                     conditionName, timeInSeconds, e.getMessage()));
             exception.setStackTrace(e.getStackTrace());
             throw exception;
+        }
+    }
+
+    public static void waitForSeconds(long seconds) {
+        long millis = TimeUnit.MILLISECONDS.convert(seconds, TimeUnit.SECONDS);
+        waitFor(millis);
+    }
+
+    public static void waitFor(long milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException(e);
         }
     }
 }

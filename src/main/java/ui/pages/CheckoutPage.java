@@ -2,6 +2,7 @@ package ui.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ui.config.Browser;
@@ -41,13 +42,16 @@ public class CheckoutPage extends GenericPage {
     }
 
     public boolean isCheckoutPageOpened() {
-        return Browser.getDriver().getTitle().equals("checkout");
+        return Browser.getDriver().getTitle().equals("Shopping Cart");
     }
 
-    @Step("Set '{0}' quantity.")
+    @Step("Set quantity: '{0}'.")
     public CheckoutPage setQuantity(int amount) {
         waitUntil(() -> qtyField.isDisplayed());
-        qtyField().clearAndType(String.valueOf(amount));
+        qtyField.sendKeys(Keys.COMMAND, "a");
+        qtyField.sendKeys(String.valueOf(amount));
+        qtyField.sendKeys(Keys.ENTER);
+        waitSpinner();
         return this;
     }
 
