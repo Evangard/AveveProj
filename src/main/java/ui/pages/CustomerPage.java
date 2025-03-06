@@ -32,11 +32,12 @@ public class CustomerPage extends GenericPage {
 
     @Step
     public CustomerPage logout() {
-        tryWaitUntil(() -> logoutButton.isDisplayed());
-        logoutButton().click();
-        if (!isCustomerLoggedOut()) {
-            throw new IllegalStateException("Customer wasn't logget out.");
-        };
+        if (tryWaitUntil(() -> logoutButton.isDisplayed())) {
+            logoutButton().click();
+            if (!isCustomerLoggedOut()) {
+                throw new IllegalStateException("Customer wasn't logged out.");
+            };
+        }
         return this;
     }
 

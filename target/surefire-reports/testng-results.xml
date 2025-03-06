@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-03T14:11:35 EET" name="Regression Suite" finished-at="2025-03-03T14:12:29 EET" duration-ms="53843">
+  <suite started-at="2025-03-06T18:47:26 EET" name="Regression Suite" finished-at="2025-03-06T18:48:43 EET" duration-ms="77160">
     <groups>
     </groups>
-    <test started-at="2025-03-03T14:11:35 EET" name="Regression" finished-at="2025-03-03T14:12:29 EET" duration-ms="53843">
+    <test started-at="2025-03-06T18:47:26 EET" name="Regression" finished-at="2025-03-06T18:48:43 EET" duration-ms="77160">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="beforeActions()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:35 EET" name="beforeActions" finished-at="2025-03-03T14:11:40 EET" duration-ms="5398" status="PASS">
+        <test-method is-config="true" signature="beforeActions()[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:26 EET" name="beforeActions" finished-at="2025-03-06T18:47:32 EET" duration-ms="6112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeActions -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:40 EET" name="beforeMethod" finished-at="2025-03-03T14:11:40 EET" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:32 EET" name="beforeMethod" finished-at="2025-03-06T18:47:32 EET" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyErrorMessageIsShownIfUserSetWrongUserData()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:40 EET" name="verifyErrorMessageIsShownIfUserSetWrongUserData" finished-at="2025-03-03T14:11:48 EET" duration-ms="8098" status="PASS">
+        <test-method signature="verifyErrorMessageIsShownIfUserSetWrongUserData()[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:32 EET" name="verifyErrorMessageIsShownIfUserSetWrongUserData" finished-at="2025-03-06T18:47:41 EET" duration-ms="8818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyErrorMessageIsShownIfUserSetWrongUserData -->
-        <test-method is-config="true" signature="afterMethodActions(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:48 EET" name="afterMethodActions" finished-at="2025-03-03T14:11:48 EET" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethodActions(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:41 EET" name="afterMethodActions" finished-at="2025-03-06T18:47:41 EET" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,40 +30,128 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodActions -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:48 EET" name="beforeMethod" finished-at="2025-03-03T14:11:49 EET" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:41 EET" name="beforeMethod" finished-at="2025-03-06T18:47:41 EET" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUserCanLoginWithValidData()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:49 EET" name="verifyUserCanLoginWithValidData" finished-at="2025-03-03T14:11:52 EET" duration-ms="3443" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserCanLoginWithValidData -->
-        <test-method is-config="true" signature="afterMethodActions(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:11:52 EET" name="afterMethodActions" finished-at="2025-03-03T14:11:55 EET" duration-ms="3459" status="PASS">
+        <test-method signature="verifyUserCanLoginWithValidData(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:41 EET" name="verifyUserCanLoginWithValidData" data-provider="userData" finished-at="2025-03-06T18:47:44 EET" duration-ms="3486" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.LoginTest.verifyUserCanLoginWithValidData()]]>
+                <![CDATA[anton.mikolaenko@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TesteR_2025]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanLoginWithValidData -->
+        <test-method is-config="true" signature="afterMethodActions(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:44 EET" name="afterMethodActions" finished-at="2025-03-06T18:47:48 EET" duration-ms="3580" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.LoginTest.verifyUserCanLoginWithValidData(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodActions -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.LoginTest@646811d6]" started-at="2025-03-03T14:12:29 EET" name="afterClass" finished-at="2025-03-03T14:12:29 EET" duration-ms="242" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:48 EET" name="beforeMethod" finished-at="2025-03-06T18:47:48 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyUserCanLoginWithValidData(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:47:48 EET" name="verifyUserCanLoginWithValidData" data-provider="userData" finished-at="2025-03-06T18:48:01 EET" duration-ms="13291" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anton.mikolaenko@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongPass]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Customer page should be opened. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Customer page should be opened. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.LoginTest.verifyUserCanLoginWithValidData(LoginTest.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanLoginWithValidData -->
+        <test-method is-config="true" signature="afterMethodActions(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:48:01 EET" name="afterMethodActions" finished-at="2025-03-06T18:48:08 EET" duration-ms="6963" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.LoginTest.verifyUserCanLoginWithValidData(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodActions -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.LoginTest@377008df]" started-at="2025-03-06T18:48:43 EET" name="afterClass" finished-at="2025-03-06T18:48:43 EET" duration-ms="262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.CheckoutTest">
-        <test-method is-config="true" signature="beforeActions()[pri:0, instance:tests.CheckoutTest@178270b2]" started-at="2025-03-03T14:11:55 EET" name="beforeActions" finished-at="2025-03-03T14:12:01 EET" duration-ms="5487" status="PASS">
+        <test-method is-config="true" signature="beforeActions()[pri:0, instance:tests.CheckoutTest@6d4c273c]" started-at="2025-03-06T18:48:08 EET" name="beforeActions" finished-at="2025-03-06T18:48:14 EET" duration-ms="5969" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeActions -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.CheckoutTest@178270b2]" started-at="2025-03-03T14:12:01 EET" name="beforeMethod" finished-at="2025-03-03T14:12:01 EET" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.CheckoutTest@6d4c273c]" started-at="2025-03-06T18:48:14 EET" name="beforeMethod" finished-at="2025-03-06T18:48:14 EET" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUserCanLoginWithValidData()[pri:0, instance:tests.CheckoutTest@178270b2]" started-at="2025-03-03T14:12:01 EET" name="verifyUserCanLoginWithValidData" finished-at="2025-03-03T14:12:29 EET" duration-ms="27825" status="PASS">
+        <test-method signature="verifyUserCanLoginWithValidData()[pri:0, instance:tests.CheckoutTest@6d4c273c]" started-at="2025-03-06T18:48:14 EET" name="verifyUserCanLoginWithValidData" finished-at="2025-03-06T18:48:43 EET" duration-ms="28622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanLoginWithValidData -->
