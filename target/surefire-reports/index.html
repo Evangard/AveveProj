@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,12 +21,11 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Regression_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Regression Suite</span>
+              <span class="suite-name border-failed">Regression Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Regression_Suite" class="hide-methods failed suite-Regression_Suite"> (hide)</a> <!-- hide-methods failed suite-Regression_Suite -->
+                      <a href="#" panel-name="suite-Regression_Suite" class="show-methods failed suite-Regression_Suite"> (show)</a> <!-- show-methods failed suite-Regression_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Regression_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, wrongPass)">verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, wrongPass)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Regression_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -109,12 +122,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Suite" title="tests.CheckoutTest" class="method navigator-link" hash-for-method="verifyUserCanLoginWithValidData">verifyUserCanLoginWithValidData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Regression_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, TesteR_2025)">verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, TesteR_2025)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="verifyUserCanLoginWithValidData">verifyUserCanLoginWithValidData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Regression_Suite" title="tests.CheckoutTest" class="method navigator-link" hash-for-method="verifyUserCanLoginWithValidData">verifyUserCanLoginWithValidData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Regression_Suite -->
@@ -129,21 +142,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Regression_Suite" class="panel Regression_Suite">
-          <div class="suite-Regression_Suite-class-passed">
+          <div class="suite-Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.CheckoutTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserCanLoginWithValidData">
-                  </a> <!-- verifyUserCanLoginWithValidData -->
+                  <a name="verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, wrongPass)">
+                  </a> <!-- verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, wrongPass) -->
                   <span class="method-name">verifyUserCanLoginWithValidData</span>
+                  <span class="parameters">(anton.mikolaenko@gmail.com,wrongPass)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Customer page should be opened. expected [true] but found [false]
+	at tests.LoginTest.verifyUserCanLoginWithValidData(LoginTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression_Suite-class-passed -->
+          </div> <!-- suite-Regression_Suite-class-failed -->
           <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -157,6 +176,22 @@
                   <span class="method-name">verifyErrorMessageIsShownIfUserSetWrongUserData</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, TesteR_2025)">
+                  </a> <!-- verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, TesteR_2025) -->
+                  <span class="method-name">verifyUserCanLoginWithValidData</span>
+                  <span class="parameters">(anton.mikolaenko@gmail.com,TesteR_2025)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Suite-class-passed -->
+          <div class="suite-Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.CheckoutTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="verifyUserCanLoginWithValidData">
@@ -222,24 +257,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyUserCanLoginWithValidData')
 data.setCell(0, 2, 'tests.CheckoutTest')
-data.setCell(0, 3, 27825);
+data.setCell(0, 3, 28622);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyErrorMessageIsShownIfUserSetWrongUserData')
+data.setCell(1, 1, 'verifyUserCanLoginWithValidData')
 data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 8098);
+data.setCell(1, 3, 13291);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyUserCanLoginWithValidData')
+data.setCell(2, 1, 'verifyErrorMessageIsShownIfUserSetWrongUserData')
 data.setCell(2, 2, 'tests.LoginTest')
-data.setCell(2, 3, 3443);
+data.setCell(2, 3, 8818);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyUserCanLoginWithValidData')
+data.setCell(3, 2, 'tests.LoginTest')
+data.setCell(3, 3, 3486);
 window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-Regression_Suite">
               </div> <!-- times-div-Regression_Suite -->
             </div> <!-- times-div -->
@@ -279,49 +318,63 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">5409 ms</span>
+                <span class="method-start">6124 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyErrorMessageIsShownIfUserSetWrongUserData</span>
-                <span class="method-start">5460 ms</span>
+                <span class="method-start">6181 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethodActions(public void tests.LoginTest.verifyErrorMessageIsShownIfUserSetWrongUserData())</span>
-                <span class="method-start">13604 ms</span>
+                <span class="method-start">15041 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">13607 ms</span>
+                <span class="method-start">15045 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserCanLoginWithValidData</span>
-                <span class="method-start">13608 ms</span>
+                <span class="method-name">verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, TesteR_2025)</span>
+                <span class="method-start">15047 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethodActions(public void tests.LoginTest.verifyUserCanLoginWithValidData())</span>
-                <span class="method-start">17053 ms</span>
+                <span class="method-name">afterMethodActions(public void tests.LoginTest.verifyUserCanLoginWithValidData(java.lang.String,java.lang.String))</span>
+                <span class="method-start">18535 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">22118 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyUserCanLoginWithValidData(anton.mikolaenko@gmail.com, wrongPass)</span>
+                <span class="method-start">22119 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethodActions(public void tests.LoginTest.verifyUserCanLoginWithValidData(java.lang.String,java.lang.String))</span>
+                <span class="method-start">35583 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.CheckoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeActions</span>
-                <span class="method-start">20513 ms</span>
+                <span class="method-start">42547 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">26000 ms</span>
+                <span class="method-start">48517 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanLoginWithValidData</span>
-                <span class="method-start">26003 ms</span>
+                <span class="method-start">48520 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">53843 ms</span>
+                <span class="method-start">77186 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

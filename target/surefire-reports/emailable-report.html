@@ -9,12 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Regression Suite</th></tr>
-<tr><td><a href="#t0">Regression</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">53,843</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Regression</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">77,160</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Regression Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.CheckoutTest</td><td><a href="#m0">verifyUserCanLoginWithValidData</a></td><td rowspan="1">1741003921395</td><td rowspan="1">27825</td></tr><tr class="passedodd"><td rowspan="2">tests.LoginTest</td><td><a href="#m1">verifyErrorMessageIsShownIfUserSetWrongUserData</a></td><td rowspan="1">1741003900852</td><td rowspan="1">8098</td></tr><tr class="passedodd"><td><a href="#m2">verifyUserCanLoginWithValidData</a></td><td rowspan="1">1741003909000</td><td rowspan="1">3443</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Regression Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">verifyUserCanLoginWithValidData</a></td><td rowspan="1">1741279668330</td><td rowspan="1">13291</td></tr><tr><th colspan="4">Regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.CheckoutTest</td><td><a href="#m1">verifyUserCanLoginWithValidData</a></td><td rowspan="1">1741279694731</td><td rowspan="1">28622</td></tr><tr class="passedodd"><td rowspan="2">tests.LoginTest</td><td><a href="#m2">verifyErrorMessageIsShownIfUserSetWrongUserData</a></td><td rowspan="1">1741279652392</td><td rowspan="1">8818</td></tr><tr class="passedodd"><td><a href="#m3">verifyUserCanLoginWithValidData</a></td><td rowspan="1">1741279661258</td><td rowspan="1">3486</td></tr></tbody>
 </table>
-<h2>Regression</h2><h3 id="m0">tests.CheckoutTest#verifyUserCanLoginWithValidData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.LoginTest#verifyErrorMessageIsShownIfUserSetWrongUserData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.LoginTest#verifyUserCanLoginWithValidData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression</h2><h3 id="m0">tests.LoginTest#verifyUserCanLoginWithValidData</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>anton.mikolaenko@gmail.com</td><td>wrongPass</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Customer page should be opened. expected [true] but found [false]
+	at tests.LoginTest.verifyUserCanLoginWithValidData(LoginTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.CheckoutTest#verifyUserCanLoginWithValidData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.LoginTest#verifyErrorMessageIsShownIfUserSetWrongUserData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.LoginTest#verifyUserCanLoginWithValidData</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>anton.mikolaenko@gmail.com</td><td>TesteR_2025</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
