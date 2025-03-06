@@ -25,9 +25,9 @@ public class LoginTest extends AbstractTest {
         loginPage = homePage.openLoginPage();
     }
 
-    @Test
-    public void verifyUserCanLoginWithValidData() {
-        customerPage = loginPage.login(EMAIL, PASS);
+    @Test(dataProvider = "userData")
+    public void verifyUserCanLoginWithValidData(String email, String pass) {
+        customerPage = loginPage.login(email, pass);
         Assert.assertTrue(customerPage.isCustomerPageShown(),"Customer page should be opened.");
     }
 
@@ -44,4 +44,13 @@ public class LoginTest extends AbstractTest {
             homePage.openLoginPage();
         }
     }
+
+    @DataProvider(name = "userData")
+    public static Object[][] userData() {
+        return new Object[][]{
+                {EMAIL, PASS},
+                {EMAIL, "wrongPass"}
+        };
+    }
+
 }
