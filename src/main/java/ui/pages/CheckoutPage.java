@@ -48,7 +48,7 @@ public class CheckoutPage extends GenericPage {
     @Step("Set quantity: '{0}'.")
     public CheckoutPage setQuantity(int amount) {
         waitUntil(() -> qtyField.isDisplayed());
-        qtyField.sendKeys(Keys.COMMAND, "a");
+        qtyField.sendKeys(Keys.CONTROL, "a");
         qtyField.sendKeys(String.valueOf(amount));
         qtyField.sendKeys(Keys.ENTER);
         waitSpinner();
